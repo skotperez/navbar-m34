@@ -34,6 +34,7 @@ $m34navbar_main_url = "http://jusdolive.fr";
 // Register styles and scripts
 function m34navbar_scripts_styles() {
 	wp_enqueue_style( 'm34navbar-css',plugins_url( 'style/m34navbar.css' , __FILE__) );
+	wp_enqueue_style( 'm34navbar-fonts-css',plugins_url( 'fonts/stylesheet.css' , __FILE__) );
 } // END register scripts and styles
 
 // Output extra styles
@@ -56,15 +57,21 @@ function m34navbar_output() {
 				<a class='system-light' href='" .M34NAVBAR_MAIN_URL. "'><img src='" .M34NAVBAR_LOGO_SRC. "' alt='" .M34NAVBAR_LOGO_ALT. "' /></a>
 			</div><!-- .system-sun -->
 			<div class='system-planets'>
-				<ul id='planet-1' class='system-planet planet-left'>
-					<li><a href=''>About</a></li>
-					<li><a href=''>Services</a></li>
-					<li><a href=''>Contact</a></li>
+				<ul id='planet-social' class='system-planet planet-left'>
+					<li><a href='http://twitter.com/jusdolive' title='Twitter'>&#62217;</a></li>
+					<li><a href='http://www.facebook.com/jusdolivemagazine' title='Facebook'>&#62222;</a></li>
+					<li><a href='http://plus.google.com/102425984237162038524' title='Google Plus'>&#62223;</a></li>
+					<li><a href='' title='Linkedin'>&#62232;</a></li>
+				</ul><!-- .system-planet -->
+				<ul id='planet-1' class='system-planet planet-right'>
+					<li class='planet-1-1'><a href='http://guide.jusdolive.fr'>Guide de professionels</a></li>
+					<li class='planet-1-2'><a href='http://jusdolive.fr'>Magazine d'actualites</a></li>
+					<li class='planet-1-3' ><a href='http://glossaire.jusdolive.fr'>Glossaire</a></li>
 				</ul><!-- .system-planet -->
 				<ul id='planet-2' class='system-planet planet-right'>
-					<li><a href=''>About</a></li>
-					<li><a href=''>Services</a></li>
-					<li><a href=''>Contact</a></li>
+					<li><a href='http://jusdolive.fr/about'>À propos</a></li>
+					<li><a href='http://jusdolive.fr/services'>Services</a></li>
+					<li><a href='http://jusdolive.fr-contact'>Contact</a></li>
 				</ul><!-- .system-planet -->
 			</div><!-- .system-planets -->
 		</div><!-- .system-limit -->

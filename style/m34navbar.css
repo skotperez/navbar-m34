@@ -28,7 +28,7 @@
 	height: 35px;
 }
 .system-planets .system-planet {
-	margin: 0;
+	margin: 0 0 0 12px;
 	padding: 0;
 	list-style: none outside none;
 }
@@ -45,8 +45,36 @@
 }
 .system-planets .system-planet li a {
 	display: block;
-	padding: 12px;
+	padding: 12px 6px;
 	font: normal normal bold 11px/11px sans-serif;
 	text-transform: uppercase;
+}
+
+#planet-1 li.planet-1-1 a {
+	background-color: #fc0;
+}
+#planet-1 li.planet-1-2 a {
+	background-color: #abc837;
+}
+#planet-1 li.planet-1-3 a {
+	background-color: #5fbcd3;
+}
+#planet-1 li a {
+	color: #fff;
+}
+#planet-1 li a:hover {
+	opacity: 0.8;
+}
+#planet-2 li a {
+	color: #ccc;
+}
+#planet-2 li a:hover {
+	color: #fff;
+}
+#planet-social li a {
+	color: #ccc;
+	font: normal normal normal 32px/11px 'entypo_social';
+}
+#planet-social li a:hover {
 	color: #fff;
 }
