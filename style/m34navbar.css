@@ -1,33 +1,40 @@
-#m34navbar-system {
+nav {
+	display: block;
+}
+#m34navbar-galaxy {
 	width: 100%;
-	height: 35px;
+	min-height: 35px;
 	background-color: #333;
 	color: #fff;
 	position: fixed;
 	right: 0;
 	left: 0;
+	z-index: 501;
 }
-#m34navbar-system img {
+#m34navbar-galaxy img {
 	vertical-align: middle;
 	border: 0px none;
 }
-#m34navbar-system .system-limit {
-	width: 1170px;
+#m34navbar-galaxy .galaxy-limit {
 	margin: 0 auto;
-	padding: 0 15px;
+	padding: 0;
 }
-#m34navbar-system .system-sun {
+#m34navbar-galaxy .galaxy-system {
 	margin: 0;
-	float: left;
 }
-#m34navbar-system .system-sun .system-switch {
+#m34navbar-galaxy .system-star {
 	display: none;
+	padding: 12px 6px;
+	margin: 0 12px;
+	font: normal normal bold 32px/11px 'entypo';
+	background-color: #000;
+	color: #fff;
 }
-#m34navbar-system .system-sun .system-light {
+#m34navbar-galaxy .galaxy-system a.sun {
 	float: left;
 	height: 35px;
 }
-.system-planets .system-planet {
+.system-planet {
 	margin: 0 0 0 12px;
 	padding: 0;
 	list-style: none outside none;
@@ -39,31 +46,37 @@
 	float: right;
 }
 
-.system-planets .system-planet li {
+.system-planet li {
 	float: left;
 	display: block;
 }
-.system-planets .system-planet li a {
+.system-planet li a {
 	display: block;
 	padding: 12px 6px;
-	font: normal normal bold 11px/11px sans-serif;
+	font: normal normal normal 10px/11px sans-serif;
 	text-transform: uppercase;
 }
 
 #planet-1 li.planet-1-1 a {
-	background-color: #fc0;
+	background-color: #bcd35f;
 }
-#planet-1 li.planet-1-2 a {
+#planet-1 li.planet-1-1 a:hover {
 	background-color: #abc837;
 }
+#planet-1 li.planet-1-2 a {
+	background-color: #fd5;
+}
+#planet-1 li.planet-1-2 a:hover {
+	background-color: #fc0;
+}
 #planet-1 li.planet-1-3 a {
+	background-color: #87cdde;
+}
+#planet-1 li.planet-1-3 a:hover {
 	background-color: #5fbcd3;
 }
 #planet-1 li a {
 	color: #fff;
-}
-#planet-1 li a:hover {
-	opacity: 0.8;
 }
 #planet-2 li a {
 	color: #ccc;
@@ -77,4 +90,40 @@
 }
 #planet-social li a:hover {
 	color: #fff;
+}
+
+
+@media (min-width: 1200px) {
+	#m34navbar-galaxy {
+		height: 35px;
+	}
+	#m34navbar-galaxy .galaxy-limit {
+		width: 1200px;
+	}
+}
+@media (min-width: 768px) and (max-width: 1199px) {
+	#m34navbar-galaxy .galaxy-limit {
+		width: 95%;
+	}
+}
+@media (max-width: 900px) {
+	.galaxy-system-dark {
+		display: none;
+	}
+	.system-star {
+		display: inline-block !important;
+	}
+}
+@media (max-width: 767px) {
+	#m34navbar-galaxy {
+		position: absolute;
+		top: 0 !important;
+	}
+	.system-planet {
+		clear: both;
+		float: none;
+		display: block;
+	}
+	.system-planet li {
+	}
 }

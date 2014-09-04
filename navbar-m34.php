@@ -35,14 +35,21 @@ $m34navbar_main_url = "http://jusdolive.fr";
 function m34navbar_scripts_styles() {
 	wp_enqueue_style( 'm34navbar-css',plugins_url( 'style/m34navbar.css' , __FILE__) );
 	wp_enqueue_style( 'm34navbar-fonts-css',plugins_url( 'fonts/stylesheet.css' , __FILE__) );
+	wp_enqueue_script(
+		'm34navbar-js',
+		plugins_url( 'js/m34navbar.js' , __FILE__),
+		array('jquery'),
+		'0.1',
+		TRUE
+	);
 } // END register scripts and styles
 
 // Output extra styles
 function m34navbar_extra_styles() {
 
 	if ( is_admin_bar_showing() ) { $mtop = "67"; $top = "32"; } else { $mtop = "35"; $top = "0"; }
-	$m34navbar_extra_style = "<style media='print' type='text/css'>#m34navbar-system{display:none;}</style>";
-	$m34navbar_extra_style .= "<style media='screen' type='text/css'>html,* html body {margin-top: " .$mtop. "px !important;}#m34navbar-system{ top: " .$top. "px;}</style>";
+	$m34navbar_extra_style = "<style media='print' type='text/css'>#m34navbar-galaxy{display:none;}</style>";
+	$m34navbar_extra_style .= "<style media='screen' type='text/css'>html,* html body {margin-top: " .$mtop. "px !important;}#m34navbar-galaxy{ top: " .$top. "px;}</style>";
 	echo $m34navbar_extra_style;
 } // END output extra styles
 
@@ -50,13 +57,13 @@ function m34navbar_extra_styles() {
 function m34navbar_output() {
 
 	$navbar_output = "
-	<nav id='m34navbar-system'>
-		<div class='system-limit'>
-			<div class='system-sun'>
-				<a class='system-swicht' href=''><img src='' alt='' /></a>
-				<a class='system-light' href='" .M34NAVBAR_MAIN_URL. "'><img src='" .M34NAVBAR_LOGO_SRC. "' alt='" .M34NAVBAR_LOGO_ALT. "' /></a>
-			</div><!-- .system-sun -->
-			<div class='system-planets'>
+	<nav id='m34navbar-galaxy'>
+		<div class='galaxy-limit'>
+			<div class='galaxy-system'>
+				<a class='sun' href='" .M34NAVBAR_MAIN_URL. "'><img src='" .M34NAVBAR_LOGO_SRC. "' alt='" .M34NAVBAR_LOGO_ALT. "' /></a>
+			</div><!-- .galaxy-system -->
+			<a class='system-star' href='#'>&#59236;</a>
+			<div class='galaxy-system-dark'>
 				<ul id='planet-social' class='system-planet planet-left'>
 					<li><a href='http://twitter.com/jusdolive' title='Twitter'>&#62217;</a></li>
 					<li><a href='http://www.facebook.com/jusdolivemagazine' title='Facebook'>&#62222;</a></li>
@@ -73,8 +80,8 @@ function m34navbar_output() {
 					<li><a href='http://jusdolive.fr/services'>Services</a></li>
 					<li><a href='http://jusdolive.fr-contact'>Contact</a></li>
 				</ul><!-- .system-planet -->
-			</div><!-- .system-planets -->
-		</div><!-- .system-limit -->
+			</div><!-- .galaxy-system-dark -->
+		</div><!-- .galaxy-limit -->
 	</nav>
 	";
 	echo $navbar_output;
