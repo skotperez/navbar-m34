@@ -1,0 +1,52 @@
+#m34navbar-system {
+	width: 100%;
+	height: 35px;
+	background-color: #333;
+	color: #fff;
+	position: fixed;
+	right: 0;
+	left: 0;
+}
+#m34navbar-system img {
+	vertical-align: middle;
+	border: 0px none;
+}
+#m34navbar-system .system-limit {
+	width: 1170px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+#m34navbar-system .system-sun {
+	margin: 0;
+	float: left;
+}
+#m34navbar-system .system-sun .system-switch {
+	display: none;
+}
+#m34navbar-system .system-sun .system-light {
+	float: left;
+	height: 35px;
+}
+.system-planets .system-planet {
+	margin: 0;
+	padding: 0;
+	list-style: none outside none;
+}
+.planet-left {
+	float: left;
+}
+.planet-right {
+	float: right;
+}
+
+.system-planets .system-planet li {
+	float: left;
+	display: block;
+}
+.system-planets .system-planet li a {
+	display: block;
+	padding: 12px;
+	font: normal normal bold 11px/11px sans-serif;
+	text-transform: uppercase;
+	color: #fff;
+}
