@@ -67,11 +67,11 @@ function m34navbar_output() {
 				<ul id='planet-social' class='system-planet planet-left'>
 					<li><a href='http://twitter.com/jusdolive' title='Twitter'>&#62217;</a></li>
 					<li><a href='http://www.facebook.com/jusdolivemagazine' title='Facebook'>&#62222;</a></li>
-					<li><a href='http://plus.google.com/102425984237162038524' title='Google Plus'>&#62223;</a></li>
+					<li><a href='http://plus.google.com/+cecilelegalliard' title='Google Plus'>&#62223;</a></li>
 					<li><a href='http://fr.linkedin.com/in/cecilelegalliard' title='Linkedin'>&#62232;</a></li>
 				</ul><!-- .system-planet -->
 				<ul id='planet-1' class='system-planet planet-right'>
-					<li class='planet-1-1'><a href='http://guide.jusdolive.fr/pro'>Guide de professionels</a></li>
+					<li class='planet-1-1'><a href='http://guide.jusdolive.fr/'>Guide de professionels</a></li>
 					<li class='planet-1-2'><a href='http://jusdolive.fr/actualites'>Magazine d'actualites</a></li>
 					<li class='planet-1-3' ><a href='http://glossaire.jusdolive.fr'>Glossaire</a></li>
 				</ul><!-- .system-planet -->
