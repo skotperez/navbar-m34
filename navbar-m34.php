@@ -15,23 +15,18 @@ $m34navbar_main_url = "http://jusdolive.fr";
 $m34navbar_dropdown_icon = plugins_url( 'images/navbar.dropdown.icon.png' , __FILE__);
 /* STOP EDIT */
 
-// plugin main activation function
-//register_activation_hook( __FILE__, 'm34glossary_activate' );
-//function m34glossary_activate() {
+if (!defined('M34NAVBAR_LOGO_SRC')) define('M34NAVBAR_LOGO_SRC', $m34navbar_logo_src);
+if (!defined('M34NAVBAR_LOGO_ALT')) define('M34NAVBAR_LOGO_ALT', $m34navbar_logo_alt);
+if (!defined('M34NAVBAR_MAIN_URL')) define('M34NAVBAR_MAIN_URL', $m34navbar_main_url);
+if (!defined('M34NAVBAR_DROPDOWN_ICON')) define('M34NAVBAR_DROPDOWN_ICON', $m34navbar_dropdown_icon);
 
-	if (!defined('M34NAVBAR_LOGO_SRC')) define('M34NAVBAR_LOGO_SRC', $m34navbar_logo_src);
-	if (!defined('M34NAVBAR_LOGO_ALT')) define('M34NAVBAR_LOGO_ALT', $m34navbar_logo_alt);
-	if (!defined('M34NAVBAR_MAIN_URL')) define('M34NAVBAR_MAIN_URL', $m34navbar_main_url);
-	if (!defined('M34NAVBAR_DROPDOWN_ICON')) define('M34NAVBAR_DROPDOWN_ICON', $m34navbar_dropdown_icon);
+/* Load map JavaScript and styles */
+add_action( 'wp_enqueue_scripts', 'm34navbar_scripts_styles' );
 
-	/* Load map JavaScript and styles */
-	add_action( 'wp_enqueue_scripts', 'm34navbar_scripts_styles' );
-
-	/* Output navbar */
-	add_action( 'wp_footer', 'm34navbar_output',999 );
-	/* Output extra styles */
-	add_action( 'wp_head', 'm34navbar_extra_styles',9999 );
-//} // END plugin main activation function
+/* Output navbar */
+add_action( 'wp_footer', 'm34navbar_output',999 );
+/* Output extra styles */
+add_action( 'wp_head', 'm34navbar_extra_styles',9999 );
 
 // Register styles and scripts
 function m34navbar_scripts_styles() {
