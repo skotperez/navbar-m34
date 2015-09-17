@@ -12,6 +12,7 @@ License: GPLv2+
 $m34navbar_logo_src = plugins_url( 'images/jusdolive.navbar.png' , __FILE__);
 $m34navbar_logo_alt = "jusdolive logo";
 $m34navbar_main_url = "http://jusdolive.fr";
+$m34navbar_dropdown_icon = plugins_url( 'images/navbar.dropdown.icon.png' , __FILE__);
 /* STOP EDIT */
 
 // plugin main activation function
@@ -21,6 +22,7 @@ $m34navbar_main_url = "http://jusdolive.fr";
 	if (!defined('M34NAVBAR_LOGO_SRC')) define('M34NAVBAR_LOGO_SRC', $m34navbar_logo_src);
 	if (!defined('M34NAVBAR_LOGO_ALT')) define('M34NAVBAR_LOGO_ALT', $m34navbar_logo_alt);
 	if (!defined('M34NAVBAR_MAIN_URL')) define('M34NAVBAR_MAIN_URL', $m34navbar_main_url);
+	if (!defined('M34NAVBAR_DROPDOWN_ICON')) define('M34NAVBAR_DROPDOWN_ICON', $m34navbar_dropdown_icon);
 
 	/* Load map JavaScript and styles */
 	add_action( 'wp_enqueue_scripts', 'm34navbar_scripts_styles' );
@@ -62,7 +64,7 @@ function m34navbar_output() {
 			<div class='galaxy-system'>
 				<a class='sun' href='" .M34NAVBAR_MAIN_URL. "'><img src='" .M34NAVBAR_LOGO_SRC. "' alt='" .M34NAVBAR_LOGO_ALT. "' /></a>
 			</div><!-- .galaxy-system -->
-			<a class='system-star' href='#'>&#59236;</a>
+			<a class='system-star' href='#'><img src='" .M34NAVBAR_DROPDOWN_ICON. "' alt='Open/Close' /></a>
 			<div class='galaxy-system-dark'>
 				<ul id='planet-social' class='system-planet planet-left'>
 					<li><a href='http://twitter.com/jusdolive' title='Twitter'>&#62217;</a></li>

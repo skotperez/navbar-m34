@@ -112,6 +112,7 @@ nav {
 	}
 	.system-star {
 		display: inline-block !important;
+		float: right;
 	}
 }
 @media (max-width: 767px) {
